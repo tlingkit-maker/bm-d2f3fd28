@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bookmarks">
+<meta name="robots" content="noindex, nofollow">
+<title>Bookmarks</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #1a73e8;
+    --hover: #eef2ff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --surface: #181b22;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --border: #2a2e36;
+      --accent: #8ab4f8;
+      --hover: #1f2937;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: env(safe-area-inset-top) 12px 8px;
+  }
+  .title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 4px 8px;
+  }
+  .title-row h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .title-row .stamp {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .search {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+  }
+  .search:focus { border-color: var(--accent); }
+  main {
+    padding: 6px 4px env(safe-area-inset-bottom);
+  }
+  ul.tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.tree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 18px;
+    border-left: 1px dashed var(--border);
+  }
+  .folder-row, .bookmark-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .folder-row:active, .bookmark-row:active { background: var(--hover); }
+  @media (hover: hover) {
+    .folder-row:hover, .bookmark-row:hover { background: var(--hover); }
+  }
+  .chevron {
+    width: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  .folder-row.open > .chevron { transform: rotate(90deg); }
+  .icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon img {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+  }
+  .folder-icon {
+    color: var(--muted);
+    font-size: 18px;
+  }
+  .label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .bookmark-row .label {
+    color: var(--text);
+    font-size: 15px;
+  }
+  .bookmark-row .url {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .bookmark-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .bookmark-row .text {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+  }
+  .bookmark-row .text .label,
+  .bookmark-row .text .url {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .count {
+    color: var(--muted);
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .nested { display: none; }
+  .nested.open { display: block; }
+  .empty {
+    padding: 24px 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  a.bookmark-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title-row">
+    <h1>Bookmarks</h1>
+    <span class="stamp" id="stamp"></span>
+  </div>
+  <input class="search" id="search" type="search" placeholder="Search bookmarks…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
+</header>
+
+<main>
+  <ul class="tree" id="tree"></ul>
+  <div class="empty" id="empty" style="display:none">No bookmarks match.</div>
+</main>
+
+<script>
+  // Data loaded from bookmarks.json sitting next to index.html.
+  // Cache-bust on every load so iPhone Safari picks up new exports.
+  const DATA_URL = 'bookmarks.json?t=' + Date.now();
+
+  let TREE = null;
+  let GENERATED_AT = '';
+
+  function faviconUrl(pageUrl) {
+    try {
+      const u = new URL(pageUrl);
+      return 'https://www.google.com/s2/favicons?domain=' + u.hostname + '&sz=64';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function el(tag, props, children) {
+    const e = document.createElement(tag);
+    if (props) Object.entries(props).forEach(([k, v]) => {
+      if (k === 'class') e.className = v;
+      else if (k === 'html') e.innerHTML = v;
+      else if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v);
+    });
+    (children || []).forEach(c => { if (c) e.appendChild(c); });
+    return e;
+  }
+
+  function renderBookmark(b) {
+    const a = el('a', { class: 'bookmark-link', href: b.url, target: '_blank', rel: 'noopener noreferrer' });
+    const row = el('div', { class: 'bookmark-row' });
+    const icon = el('div', { class: 'icon' });
+    const img = el('img', { src: faviconUrl(b.url), alt: '', loading: 'lazy' });
+    img.onerror = () => { icon.textContent = '🔗'; };
+    icon.appendChild(img);
+    const text = el('div', { class: 'text' });
+    text.appendChild(el('span', { class: 'label', html: escapeHtml(b.title) }));
+    text.appendChild(el('span', { class: 'url', html: escapeHtml(prettyUrl(b.url)) }));
+    row.appendChild(icon);
+    row.appendChild(text);
+    a.appendChild(row);
+    return el('li', null, [a]);
+  }
+
+  function renderFolder(name, node, depth) {
+    const total = countBookmarks(node);
+    if (total === 0) return null;
+
+    const li = el('li');
+    const row = el('div', { class: 'folder-row' });
+    const chev = el('span', { class: 'chevron', html: '▶' });
+    const icon = el('div', { class: 'icon folder-icon', html: '📁' });
+    const label = el('span', { class: 'label', html: escapeHtml(name) });
+    const count = el('span', { class: 'count', html: String(total) });
+    row.appendChild(chev);
+    row.appendChild(icon);
+    row.appendChild(label);
+    row.appendChild(count);
+
+    const nested = el('ul', { class: 'nested' });
+    // Subfolders first, then this folder's direct bookmarks
+    Object.keys(node).filter(k => k !== '_bookmarks').sort((a, b) => a.localeCompare(b)).forEach(sub => {
+      const child = renderFolder(sub, node[sub], depth + 1);
+      if (child) nested.appendChild(child);
+    });
+    (node._bookmarks || []).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
+      nested.appendChild(renderBookmark(b));
+    });
+
+    row.addEventListener('click', (e) => {
+      e.preventDefault();
+      row.classList.toggle('open');
+      nested.classList.toggle('open');
+    });
+
+    li.appendChild(row);
+    li.appendChild(nested);
+    return li;
+  }
+
+  function countBookmarks(node) {
+    let n = (node._bookmarks || []).length;
+    Object.keys(node).forEach(k => {
+      if (k !== '_bookmarks') n += countBookmarks(node[k]);
+    });
+    return n;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  function prettyUrl(url) {
+    try {
+      const u = new URL(url);
+      return u.hostname + u.pathname;
+    } catch (e) {
+      return url;
+    }
+  }
+
+  function render(tree) {
+    const root = document.getElementById('tree');
+    root.innerHTML = '';
+    // Top-level: render named folders first, then root-level bookmarks
+    Object.keys(tree).filter(k => k !== '_bookmarks').sort((a, b) => a.localeCompare(b)).forEach(name => {
+      const li = renderFolder(name, tree[name], 0);
+      if (li) root.appendChild(li);
+    });
+    (tree._bookmarks || []).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
+      root.appendChild(renderBookmark(b));
+    });
+  }
+
+  function flattenForSearch(node, path) {
+    let out = [];
+    (node._bookmarks || []).forEach(b => out.push({
+      title: b.title, url: b.url, path: path, date_added: b.date_added || ''
+    }));
+    Object.keys(node).forEach(k => {
+      if (k !== '_bookmarks') {
+        out = out.concat(flattenForSearch(node[k], path ? path + ' / ' + k : k));
+      }
+    });
+    return out;
+  }
+
+  function renderSearch(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      render(TREE);
+      document.getElementById('empty').style.display = 'none';
+      return;
+    }
+    const all = flattenForSearch(TREE, '');
+    const hits = all.filter(b =>
+      b.title.toLowerCase().includes(q) ||
+      b.url.toLowerCase().includes(q) ||
+      b.path.toLowerCase().includes(q)
+    ).sort((a, b) => (b.date_added || '').localeCompare(a.date_added || ''));
+
+    const root = document.getElementById('tree');
+    root.innerHTML = '';
+    hits.forEach(b => {
+      const li = renderBookmark(b);
+      // Append folder path as a small subtitle
+      if (b.path) {
+        const pathLine = el('span', { class: 'url', html: '📁 ' + escapeHtml(b.path) });
+        li.querySelector('.text').appendChild(pathLine);
+      }
+      root.appendChild(li);
+    });
+    document.getElementById('empty').style.display = hits.length ? 'none' : 'block';
+  }
+
+  async function init() {
+    try {
+      const r = await fetch(DATA_URL, { cache: 'no-store' });
+      const data = await r.json();
+      TREE = data.tree;
+      GENERATED_AT = data.generated_at;
+      document.getElementById('stamp').textContent = 'Updated ' + GENERATED_AT;
+      render(TREE);
+    } catch (e) {
+      document.getElementById('empty').style.display = 'block';
+      document.getElementById('empty').textContent = 'Failed to load bookmarks.json';
+    }
+  }
+
+  document.getElementById('search').addEventListener('input', (e) => renderSearch(e.target.value));
+  init();
+</script>
+
+</body>
+</html>
