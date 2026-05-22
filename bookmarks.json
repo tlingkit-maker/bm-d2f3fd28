@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-22 06:42",
-  "total": 730,
+  "generated_at": "2026-05-22 06:49",
+  "total": 731,
   "tree": {
     "_bookmarks": [],
     "Allen": {
@@ -1609,6 +1609,11 @@
         },
         "Claude": {
           "_bookmarks": [
+            {
+              "title": "7 Ways to Use Claude So Well It Feels Illegal",
+              "url": "https://www.youtube.com/watch?v=28TGfTZweqw",
+              "date_added": "2026-05-22T06:48:20.956651"
+            },
             {
               "title": "Create Your Own Personal Claude AI System (That Makes Your Work EASY)",
               "url": "https://youtu.be/IevmGCVo9Pw?si=ITo-wuF8AloC6R4H",
@@ -3808,6 +3813,12 @@
     }
   },
   "list": [
+    {
+      "title": "7 Ways to Use Claude So Well It Feels Illegal",
+      "url": "https://www.youtube.com/watch?v=28TGfTZweqw",
+      "folder_path": "Technology/AI/Claude",
+      "date_added": "2026-05-22T06:48:20.956651"
+    },
     {
       "title": "The Gemini Redesign Is Here: It’s Gorgeous (New Ui, Live, and Visuals)",
       "url": "https://youtu.be/-7vdYwBaubA?si=kmUqwook1oUD0bfJ",
