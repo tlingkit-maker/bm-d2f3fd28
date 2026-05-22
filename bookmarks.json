@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-21 20:10",
-  "total": 740,
+  "generated_at": "2026-05-21 21:01",
+  "total": 750,
   "tree": {
     "_bookmarks": [],
     "Allen": {
@@ -1625,6 +1625,16 @@
         "Claude": {
           "_bookmarks": [
             {
+              "title": "Create Your Own Personal Claude AI System (That Makes Your Work EASY)",
+              "url": "https://youtu.be/IevmGCVo9Pw?si=ITo-wuF8AloC6R4H",
+              "date_added": "2026-05-21T20:45:13.193246"
+            },
+            {
+              "title": "Google Search: Claude Things 3 MCP",
+              "url": "https://www.google.com/search?q=claude+things+3+mcp&sca_esv=0496a7cdad5df499&rlz=1C5CHFA_enUS1200US1200&sxsrf=ANbL-n4DQe3WMeKFPWi9JuXONAaIk6yszw%3A1779405498224&ei=upIPaoi4Db6wur8Pzum-sAw&biw=1309&bih=631&oq=claude+things+3+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGNsYXVkZSB0aGluZ3MgMyAqAggBMgoQIxiABBiKBRgnMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBRAAGO8FMggQABiABBiiBDIFEAAY7wVIh0pQpRNYqjZwAXgAkAEAmAGEAaABsAiqAQM5LjK4AQHIAQD4AQGYAgygAvcIwgIIEAAYgAQYsAPCAg4QABiABBiKBRiGAxiwA8ICCxAAGIAEGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiKBRiGA5gDAIgGAZAGBpIHAzkuM6AH6zGyBwM4LjO4B_MIwgcEMi0xMsgHMIAIAQ&sclient=gws-wiz-serp",
+              "date_added": "2026-05-21T20:45:05.503376"
+            },
+            {
               "title": "Every Level of Claude Explained in 21 Minutes",
               "url": "https://youtube.com/watch?v=ZRb7D6R64hM&si=dj2iLss04m6MJ30O",
               "date_added": "2026-05-21T13:08:50.977229"
@@ -2142,6 +2152,26 @@
           ],
           "Claude-Code": {
             "_bookmarks": [
+              {
+                "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+                "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+                "date_added": "2026-05-21T20:45:14.389606"
+              },
+              {
+                "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+                "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+                "date_added": "2026-05-21T20:45:13.731907"
+              },
+              {
+                "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+                "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+                "date_added": "2026-05-21T20:45:13.422241"
+              },
+              {
+                "title": "6 Claude Code GitHub Repos That Change Everything",
+                "url": "https://youtu.be/L2JKgj7WzU4?si=zuqRbYyKSbAlbK3F",
+                "date_added": "2026-05-21T20:45:05.824480"
+              },
               {
                 "title": "Full Claude Code Tutorial for Non-Technical Beginners in 2026 (step-by-step)",
                 "url": "https://youtube.com/watch?v=bqJzIWAEn40&si=5B61nsSMSes_1MaS",
@@ -2957,6 +2987,11 @@
           "Cowork": {
             "_bookmarks": [
               {
+                "title": "Every Claude Cowork Feature Explained Clearly",
+                "url": "https://youtu.be/seLX6SwP2hY?si=a8ycrGmMCLtUEnTF",
+                "date_added": "2026-05-21T20:45:03.866225"
+              },
+              {
                 "title": "FULL Claude Cowork Tutorial For Beginners in 2026! (Zero to PRO)",
                 "url": "https://youtube.com/watch?v=JdQ_FHgP5ms&si=YUJdhWrNSnFPVS22",
                 "date_added": "2026-05-21T13:08:53.738816"
@@ -3246,6 +3281,21 @@
         },
         "Gemini": {
           "_bookmarks": [
+            {
+              "title": "The Gemini Redesign Is Here: It’s Gorgeous (New Ui, Live, and Visuals)",
+              "url": "https://youtu.be/-7vdYwBaubA?si=kmUqwook1oUD0bfJ",
+              "date_added": "2026-05-21T20:45:21.527241"
+            },
+            {
+              "title": "Google Gemini Announced 24/7 AI Agents! (Gemini Spark) #shorts",
+              "url": "https://www.youtube.com/watch?v=wUNPu7sJo80",
+              "date_added": "2026-05-21T20:45:20.986342"
+            },
+            {
+              "title": "Google’s Gemini’s New Updates Change Everything! (Google I/O Day 2 Recap)",
+              "url": "https://www.youtube.com/watch?v=MfXPRUCWrbY",
+              "date_added": "2026-05-21T20:45:03.062744"
+            },
             {
               "title": "Google unveils Gemini Spark — a '24/7 personal AI agent'",
               "url": "https://www.tomsguide.com/ai/google-gemini/google-unveils-gemini-spark-a-24-7-personal-ai-agent-that-could-be-a-game-changer-for-agentic-ai",
@@ -3858,6 +3908,66 @@
     }
   },
   "list": [
+    {
+      "title": "The Gemini Redesign Is Here: It’s Gorgeous (New Ui, Live, and Visuals)",
+      "url": "https://youtu.be/-7vdYwBaubA?si=kmUqwook1oUD0bfJ",
+      "folder_path": "Technology/AI/Gemini",
+      "date_added": "2026-05-21T20:45:21.527241"
+    },
+    {
+      "title": "Google Gemini Announced 24/7 AI Agents! (Gemini Spark) #shorts",
+      "url": "https://www.youtube.com/watch?v=wUNPu7sJo80",
+      "folder_path": "Technology/AI/Gemini",
+      "date_added": "2026-05-21T20:45:20.986342"
+    },
+    {
+      "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+      "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-05-21T20:45:14.389606"
+    },
+    {
+      "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+      "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-05-21T20:45:13.731907"
+    },
+    {
+      "title": "Master 80% of Claude Code. Just Learn These 15 Things.",
+      "url": "https://youtu.be/0qqV4yv-Hss?si=w-xk6ltwoKEeyqRS",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-05-21T20:45:13.422241"
+    },
+    {
+      "title": "Create Your Own Personal Claude AI System (That Makes Your Work EASY)",
+      "url": "https://youtu.be/IevmGCVo9Pw?si=ITo-wuF8AloC6R4H",
+      "folder_path": "Technology/AI/Claude",
+      "date_added": "2026-05-21T20:45:13.193246"
+    },
+    {
+      "title": "6 Claude Code GitHub Repos That Change Everything",
+      "url": "https://youtu.be/L2JKgj7WzU4?si=zuqRbYyKSbAlbK3F",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-05-21T20:45:05.824480"
+    },
+    {
+      "title": "Google Search: Claude Things 3 MCP",
+      "url": "https://www.google.com/search?q=claude+things+3+mcp&sca_esv=0496a7cdad5df499&rlz=1C5CHFA_enUS1200US1200&sxsrf=ANbL-n4DQe3WMeKFPWi9JuXONAaIk6yszw%3A1779405498224&ei=upIPaoi4Db6wur8Pzum-sAw&biw=1309&bih=631&oq=claude+things+3+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGNsYXVkZSB0aGluZ3MgMyAqAggBMgoQIxiABBiKBRgnMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBRAAGO8FMggQABiABBiiBDIFEAAY7wVIh0pQpRNYqjZwAXgAkAEAmAGEAaABsAiqAQM5LjK4AQHIAQD4AQGYAgygAvcIwgIIEAAYgAQYsAPCAg4QABiABBiKBRiGAxiwA8ICCxAAGIAEGKIEGLADwgIIEAAY7wUYsAPCAgsQABiABBiKBRiGA5gDAIgGAZAGBpIHAzkuM6AH6zGyBwM4LjO4B_MIwgcEMi0xMsgHMIAIAQ&sclient=gws-wiz-serp",
+      "folder_path": "Technology/AI/Claude",
+      "date_added": "2026-05-21T20:45:05.503376"
+    },
+    {
+      "title": "Every Claude Cowork Feature Explained Clearly",
+      "url": "https://youtu.be/seLX6SwP2hY?si=a8ycrGmMCLtUEnTF",
+      "folder_path": "Technology/AI/Claude/Cowork",
+      "date_added": "2026-05-21T20:45:03.866225"
+    },
+    {
+      "title": "Google’s Gemini’s New Updates Change Everything! (Google I/O Day 2 Recap)",
+      "url": "https://www.youtube.com/watch?v=MfXPRUCWrbY",
+      "folder_path": "Technology/AI/Gemini",
+      "date_added": "2026-05-21T20:45:03.062744"
+    },
     {
       "title": "FULL Claude Cowork Tutorial For Beginners in 2026! (Zero to PRO)",
       "url": "https://youtube.com/watch?v=JdQ_FHgP5ms&si=YUJdhWrNSnFPVS22",
