@@ -218,6 +218,29 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   }
   .toggle-track.on .toggle-thumb { transform: translateX(18px); }
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 4px 2px;
+  }
+  .filter-label {
+    font-size: 13px;
+    color: var(--muted);
+    flex: 1;
+  }
+  .yt-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 7px;
+    font-weight: 500;
+  }
 </style>
 </head>
 <body>
@@ -233,6 +256,12 @@
       <div class="toggle-thumb"></div>
     </div>
     <span class="toggle-label" id="lbl-list">Recent</span>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Hide <span class="yt-badge">▶ YouTube</span></span>
+    <div class="toggle-track" id="yt-toggle" role="switch" aria-checked="false" onclick="toggleYouTube()">
+      <div class="toggle-thumb"></div>
+    </div>
   </div>
   <input class="search" id="search" type="search" placeholder="Search bookmarks…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
 </header>
@@ -251,6 +280,30 @@
   let LIST = null;
   let GENERATED_AT = '';
   let _listMode = false;
+  let _hideYouTube = false;
+
+  function isYouTube(url) {
+    try {
+      const h = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+      return h === 'youtube.com' || h === 'youtu.be' || h === 'm.youtube.com';
+    } catch (e) { return false; }
+  }
+
+  function toggleYouTube() {
+    _hideYouTube = !_hideYouTube;
+    const track = document.getElementById('yt-toggle');
+    track.classList.toggle('on', _hideYouTube);
+    track.setAttribute('aria-checked', String(_hideYouTube));
+    // Re-render current view (respect active search if any)
+    const q = document.getElementById('search').value;
+    if (q.trim()) {
+      renderSearch(q);
+    } else if (_listMode) {
+      renderListView(LIST);
+    } else {
+      render(TREE);
+    }
+  }
 
   function faviconUrl(pageUrl) {
     try {
@@ -293,7 +346,7 @@
   function renderListView(list) {
     const root = document.getElementById('tree');
     root.innerHTML = '';
-    (list || []).forEach(b => {
+    (list || []).filter(b => !(_hideYouTube && isYouTube(b.url))).forEach(b => {
       const li = renderBookmark(b);
       // Show folder path as subtitle
       if (b.folder_path) {
@@ -341,7 +394,7 @@
       const child = renderFolder(sub, node[sub], depth + 1);
       if (child) nested.appendChild(child);
     });
-    (node._bookmarks || []).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
+    (node._bookmarks || []).filter(b => !(_hideYouTube && isYouTube(b.url))).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
       nested.appendChild(renderBookmark(b));
     });
 
@@ -357,7 +410,9 @@
   }
 
   function countBookmarks(node) {
-    let n = (node._bookmarks || []).length;
+    let n = _hideYouTube
+      ? (node._bookmarks || []).filter(b => !isYouTube(b.url)).length
+      : (node._bookmarks || []).length;
     Object.keys(node).forEach(k => {
       if (k !== '_bookmarks') n += countBookmarks(node[k]);
     });
@@ -387,16 +442,17 @@
       const li = renderFolder(name, tree[name], 0);
       if (li) root.appendChild(li);
     });
-    (tree._bookmarks || []).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
+    (tree._bookmarks || []).filter(b => !(_hideYouTube && isYouTube(b.url))).slice().sort((a, b) => (b.date_added || '').localeCompare(a.date_added || '')).forEach(b => {
       root.appendChild(renderBookmark(b));
     });
   }
 
   function flattenForSearch(node, path) {
     let out = [];
-    (node._bookmarks || []).forEach(b => out.push({
-      title: b.title, url: b.url, path: path, date_added: b.date_added || ''
-    }));
+    (node._bookmarks || []).forEach(b => {
+      if (_hideYouTube && isYouTube(b.url)) return;
+      out.push({ title: b.title, url: b.url, path: path, date_added: b.date_added || '' });
+    });
     Object.keys(node).forEach(k => {
       if (k !== '_bookmarks') {
         out = out.concat(flattenForSearch(node[k], path ? path + ' / ' + k : k));
