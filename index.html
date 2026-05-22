@@ -218,28 +218,13 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   }
   .toggle-track.on .toggle-thumb { transform: translateX(18px); }
-  .filter-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 4px 2px;
-  }
-  .filter-label {
-    font-size: 13px;
-    color: var(--muted);
-    flex: 1;
-  }
-  .yt-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    color: var(--muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 2px 7px;
-    font-weight: 500;
+  .view-toggle { gap: 12px; }
+  .toggle-separator {
+    width: 1px;
+    height: 16px;
+    background: var(--border);
+    flex-shrink: 0;
+    margin: 0 4px;
   }
 </style>
 </head>
@@ -256,12 +241,12 @@
       <div class="toggle-thumb"></div>
     </div>
     <span class="toggle-label" id="lbl-list">Recent</span>
-  </div>
-  <div class="filter-row">
-    <span class="filter-label">Hide <span class="yt-badge">▶ YouTube</span></span>
+    <div class="toggle-separator"></div>
+    <span class="toggle-label active" id="lbl-all">All</span>
     <div class="toggle-track" id="yt-toggle" role="switch" aria-checked="false" onclick="toggleYouTube()">
       <div class="toggle-thumb"></div>
     </div>
+    <span class="toggle-label" id="lbl-hideyt">Hide YT urls</span>
   </div>
   <input class="search" id="search" type="search" placeholder="Search bookmarks…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
 </header>
@@ -294,6 +279,8 @@
     const track = document.getElementById('yt-toggle');
     track.classList.toggle('on', _hideYouTube);
     track.setAttribute('aria-checked', String(_hideYouTube));
+    document.getElementById('lbl-all').classList.toggle('active', !_hideYouTube);
+    document.getElementById('lbl-hideyt').classList.toggle('active', _hideYouTube);
     // Re-render current view (respect active search if any)
     const q = document.getElementById('search').value;
     if (q.trim()) {
