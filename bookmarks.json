@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06 06:26",
-  "total": 880,
+  "generated_at": "2026-06-07 16:02",
+  "total": 887,
   "tree": {
     "_bookmarks": [],
     "Allen": {
@@ -506,6 +506,11 @@
     },
     "Entertainment": {
       "_bookmarks": [
+        {
+          "title": "I asked ChatGPT to rewrite Game of Thrones Season 8, it healed me",
+          "url": "https://youtube.com/watch?v=jii7ISNDLGM&si=2focU-T8_G56WLFQ",
+          "date_added": "2026-06-07T11:37:50.654354"
+        },
         {
           "title": "How Game of Thrones Should Have Ended? (Complete Version) - Game of Thrones Season 8",
           "url": "https://youtu.be/HX2mVfRv7kw?si=Wd3yXDzOJntQcK4d",
@@ -1327,6 +1332,11 @@
       "AI": {
         "_bookmarks": [
           {
+            "title": "Give Me 18 Minutes and I’ll Make you Dangerously Smart (with AI)",
+            "url": "https://youtu.be/A8_nNYLTXEQ?si=5lbpE_Rf_DzCpzC3",
+            "date_added": "2026-06-07T15:02:56.216275"
+          },
+          {
             "title": "Gemma 4 12B on a 16GB Mac Mini Is Surprisingly Capable",
             "url": "https://youtu.be/PDxKrp-dTDA?si=-DwadFpUpBeNSllu",
             "date_added": "2026-06-05T18:17:44.848572"
@@ -1639,6 +1649,16 @@
         ],
         "Ai-Tools": {
           "_bookmarks": [
+            {
+              "title": "LM Studio Is Getting Insane — Start Using It Now",
+              "url": "https://www.youtube.com/watch?v=OOCioZC4tk0",
+              "date_added": "2026-06-07T14:38:34.379959"
+            },
+            {
+              "title": "This AI is Free, Open Source, and Runs on Your Laptop",
+              "url": "https://youtube.com/shorts/kJniTLdWyd8?si=2QS-yhkk-NYJHEln",
+              "date_added": "2026-06-07T11:37:50.660084"
+            },
             {
               "title": "LM Studio now lets you use your iPhone to talk to local models on your Mac - 9to5Mac",
               "url": "https://9to5mac.com/2026/06/04/lm-studio-now-lets-you-use-your-iphone-to-talk-to-local-models-on-your-mac/",
@@ -2577,6 +2597,11 @@
           "Claude-Code": {
             "_bookmarks": [
               {
+                "title": "Claude Just Dropped ULTRA CODE. (Everything You Need to Know in 5 min).",
+                "url": "https://youtu.be/IgIlIWqeT-I?si=tpsCoiv_g-tSV_cb",
+                "date_added": "2026-06-07T12:33:00.853324"
+              },
+              {
                 "title": "Claude Code for Beginners — Build Your First iPhone App No Coding",
                 "url": "https://youtu.be/uJO_wLMqgTc?si=LMca7YOLwEuUrJ6U",
                 "date_added": "2026-05-31T18:49:35.342932"
@@ -3512,6 +3537,11 @@
             "_bookmarks": [
               {
                 "title": "My Simple Claude Cowork System (steal this)",
+                "url": "https://youtu.be/tU3HDnFPlqk?si=c0-M942pfd8ZTMb8",
+                "date_added": "2026-06-07T15:16:35.362730"
+              },
+              {
+                "title": "My Simple Claude Cowork System (steal this)",
                 "url": "https://youtube.com/watch?v=tU3HDnFPlqk&si=YIvYsIJ2VTkRXAwe",
                 "date_added": "2026-06-05T18:17:31.750471"
               },
@@ -4233,6 +4263,11 @@
         "Knowledge-Management": {
           "_bookmarks": [
             {
+              "title": "How To Become Dangerously Self-Educated (with AI)",
+              "url": "https://youtube.com/watch?v=VeU6gScy92s&si=tKx_mHB4jKiwwRav",
+              "date_added": "2026-06-07T11:37:50.037298"
+            },
+            {
               "title": "Build A Claude Knowledge Base That Self-Improves!",
               "url": "https://youtube.com/watch?v=ib74sLgjIBM&si=GZ5tMQ_0hADvIq88",
               "date_added": "2026-05-30T11:26:45.558252"
@@ -4575,6 +4610,48 @@
     }
   },
   "list": [
+    {
+      "title": "My Simple Claude Cowork System (steal this)",
+      "url": "https://youtu.be/tU3HDnFPlqk?si=c0-M942pfd8ZTMb8",
+      "folder_path": "Technology/AI/Claude/Cowork",
+      "date_added": "2026-06-07T15:16:35.362730"
+    },
+    {
+      "title": "Give Me 18 Minutes and I’ll Make you Dangerously Smart (with AI)",
+      "url": "https://youtu.be/A8_nNYLTXEQ?si=5lbpE_Rf_DzCpzC3",
+      "folder_path": "Technology/AI",
+      "date_added": "2026-06-07T15:02:56.216275"
+    },
+    {
+      "title": "LM Studio Is Getting Insane — Start Using It Now",
+      "url": "https://www.youtube.com/watch?v=OOCioZC4tk0",
+      "folder_path": "Technology/AI/Ai-Tools",
+      "date_added": "2026-06-07T14:38:34.379959"
+    },
+    {
+      "title": "Claude Just Dropped ULTRA CODE. (Everything You Need to Know in 5 min).",
+      "url": "https://youtu.be/IgIlIWqeT-I?si=tpsCoiv_g-tSV_cb",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-06-07T12:33:00.853324"
+    },
+    {
+      "title": "This AI is Free, Open Source, and Runs on Your Laptop",
+      "url": "https://youtube.com/shorts/kJniTLdWyd8?si=2QS-yhkk-NYJHEln",
+      "folder_path": "Technology/AI/Ai-Tools",
+      "date_added": "2026-06-07T11:37:50.660084"
+    },
+    {
+      "title": "I asked ChatGPT to rewrite Game of Thrones Season 8, it healed me",
+      "url": "https://youtube.com/watch?v=jii7ISNDLGM&si=2focU-T8_G56WLFQ",
+      "folder_path": "Entertainment",
+      "date_added": "2026-06-07T11:37:50.654354"
+    },
+    {
+      "title": "How To Become Dangerously Self-Educated (with AI)",
+      "url": "https://youtube.com/watch?v=VeU6gScy92s&si=tKx_mHB4jKiwwRav",
+      "folder_path": "Technology/AI/Knowledge-Management",
+      "date_added": "2026-06-07T11:37:50.037298"
+    },
     {
       "title": "LM Studio now lets you use your iPhone to talk to local models on your Mac - 9to5Mac",
       "url": "https://9to5mac.com/2026/06/04/lm-studio-now-lets-you-use-your-iphone-to-talk-to-local-models-on-your-mac/",
