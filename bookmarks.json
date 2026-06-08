@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-07 16:02",
-  "total": 887,
+  "generated_at": "2026-06-07 17:05",
+  "total": 891,
   "tree": {
     "_bookmarks": [],
     "Allen": {
@@ -112,6 +112,11 @@
     },
     "Education": {
       "_bookmarks": [
+        {
+          "title": "Guarding the Frozen Coast: Inside Air Station Kodiak",
+          "url": "https://youtu.be/-GgK8HuhoO4?si=ArT6MWbWJal65Qx7",
+          "date_added": "2026-06-07T17:05:03.576474"
+        },
         {
           "title": "\"From Bland to Brilliant: Transform Your Writing with Effective Tones\"",
           "url": "https://youtube.com/watch?v=zUXQQjZxov0&si=UhADvY_s5gFYaX0Q",
@@ -1332,6 +1337,11 @@
       "AI": {
         "_bookmarks": [
           {
+            "title": "The Only AI Filmmaking Workflow You'll Ever Need",
+            "url": "https://youtu.be/Sp-PVErfhk4?si=Ipow9bH8dpVVPuac",
+            "date_added": "2026-06-07T17:05:03.667829"
+          },
+          {
             "title": "Give Me 18 Minutes and I’ll Make you Dangerously Smart (with AI)",
             "url": "https://youtu.be/A8_nNYLTXEQ?si=5lbpE_Rf_DzCpzC3",
             "date_added": "2026-06-07T15:02:56.216275"
@@ -1649,6 +1659,11 @@
         ],
         "Ai-Tools": {
           "_bookmarks": [
+            {
+              "title": "Claude + Remotion Just RETIRED video editors... (ULTIMATE REMOTION TUTORIAL)",
+              "url": "https://youtu.be/oWkUwno6b0E?si=9vnLnh5cyKLp3zEu",
+              "date_added": "2026-06-07T17:05:03.472697"
+            },
             {
               "title": "LM Studio Is Getting Insane — Start Using It Now",
               "url": "https://www.youtube.com/watch?v=OOCioZC4tk0",
@@ -4400,6 +4415,11 @@
         "Ipad": {
           "_bookmarks": [
             {
+              "title": "10 Apple Photos Tricks You'll Wonder How You Lived Without",
+              "url": "https://youtu.be/jKyQxwWmM9c?si=Gw5xb1SJDZ6dIF1p",
+              "date_added": "2026-06-07T17:05:03.676683"
+            },
+            {
               "title": "iPadOS 26.4 is OUT — What’s ACTUALLY New",
               "url": "https://youtu.be/TKHy9Fb_4Rw?si=ZUlQzIGsrABXEJEV",
               "date_added": "2026-03-26T19:10:45.587468"
@@ -4610,6 +4630,30 @@
     }
   },
   "list": [
+    {
+      "title": "10 Apple Photos Tricks You'll Wonder How You Lived Without",
+      "url": "https://youtu.be/jKyQxwWmM9c?si=Gw5xb1SJDZ6dIF1p",
+      "folder_path": "Technology/Apple/Ipad",
+      "date_added": "2026-06-07T17:05:03.676683"
+    },
+    {
+      "title": "The Only AI Filmmaking Workflow You'll Ever Need",
+      "url": "https://youtu.be/Sp-PVErfhk4?si=Ipow9bH8dpVVPuac",
+      "folder_path": "Technology/AI",
+      "date_added": "2026-06-07T17:05:03.667829"
+    },
+    {
+      "title": "Guarding the Frozen Coast: Inside Air Station Kodiak",
+      "url": "https://youtu.be/-GgK8HuhoO4?si=ArT6MWbWJal65Qx7",
+      "folder_path": "Education",
+      "date_added": "2026-06-07T17:05:03.576474"
+    },
+    {
+      "title": "Claude + Remotion Just RETIRED video editors... (ULTIMATE REMOTION TUTORIAL)",
+      "url": "https://youtu.be/oWkUwno6b0E?si=9vnLnh5cyKLp3zEu",
+      "folder_path": "Technology/AI/Ai-Tools",
+      "date_added": "2026-06-07T17:05:03.472697"
+    },
     {
       "title": "My Simple Claude Cowork System (steal this)",
       "url": "https://youtu.be/tU3HDnFPlqk?si=c0-M942pfd8ZTMb8",
