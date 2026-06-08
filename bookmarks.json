@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-07 17:05",
-  "total": 891,
+  "generated_at": "2026-06-07 17:40",
+  "total": 898,
   "tree": {
     "_bookmarks": [],
     "Allen": {
@@ -112,6 +112,11 @@
     },
     "Education": {
       "_bookmarks": [
+        {
+          "title": "How To Learn So Fast It’s Almost Unfair",
+          "url": "https://youtu.be/npQ2IORdlvU?si=KJuZqmAy_5x10433",
+          "date_added": "2026-06-07T17:39:41.463219"
+        },
         {
           "title": "Guarding the Frozen Coast: Inside Air Station Kodiak",
           "url": "https://youtu.be/-GgK8HuhoO4?si=ArT6MWbWJal65Qx7",
@@ -1959,6 +1964,11 @@
         "Claude": {
           "_bookmarks": [
             {
+              "title": "Claude Design Tutorial for Beginners | Master 99% in under 20 Minutes",
+              "url": "https://youtu.be/ii9MJCBHqjM?si=BwLBsqfHpIVAQ4KN",
+              "date_added": "2026-06-07T17:39:36.122651"
+            },
+            {
               "title": "Anthropic Just Dropped Their Claude Skills Secrets (steal these)",
               "url": "https://youtu.be/VhhVoUXEGeo?si=6Gcmcl6HtnUpIukp",
               "date_added": "2026-06-05T18:17:40.521228"
@@ -2611,6 +2621,26 @@
           ],
           "Claude-Code": {
             "_bookmarks": [
+              {
+                "title": "3 AMAZING Claude Code Dynamic Workflows (Opus 4.8)",
+                "url": "https://youtu.be/9_ExDZFlaNc?si=RQ3ZPRceQsNsC968",
+                "date_added": "2026-06-07T17:39:41.710534"
+              },
+              {
+                "title": "Claude Just Dropped ULTRA CODE. (Everything You Need to Know in 5 min).",
+                "url": "https://youtu.be/IgIlIWqeT-I?si=5O4GBtXQJTIt3kl1",
+                "date_added": "2026-06-07T17:39:41.637367"
+              },
+              {
+                "title": "The Skill That 10x’d My Claude Code Projects",
+                "url": "https://youtu.be/c0kaKxM2pHg?si=itHlKFwL7xqNRBLa",
+                "date_added": "2026-06-07T17:39:36.197480"
+              },
+              {
+                "title": "I Tested Every Claude Code Feature, These 12 Are the Best",
+                "url": "https://youtu.be/vfWTyEreOEc?si=hrmeN1OQ1bfdMI6F",
+                "date_added": "2026-06-07T17:39:35.996303"
+              },
               {
                 "title": "Claude Just Dropped ULTRA CODE. (Everything You Need to Know in 5 min).",
                 "url": "https://youtu.be/IgIlIWqeT-I?si=tpsCoiv_g-tSV_cb",
@@ -4278,6 +4308,11 @@
         "Knowledge-Management": {
           "_bookmarks": [
             {
+              "title": "Build A Claude Knowledge Base That Self-Improves!",
+              "url": "https://youtu.be/ib74sLgjIBM?si=B8IXfpXPx0oGdsZg",
+              "date_added": "2026-06-07T17:39:36.221298"
+            },
+            {
               "title": "How To Become Dangerously Self-Educated (with AI)",
               "url": "https://youtube.com/watch?v=VeU6gScy92s&si=tKx_mHB4jKiwwRav",
               "date_added": "2026-06-07T11:37:50.037298"
@@ -4630,6 +4665,48 @@
     }
   },
   "list": [
+    {
+      "title": "3 AMAZING Claude Code Dynamic Workflows (Opus 4.8)",
+      "url": "https://youtu.be/9_ExDZFlaNc?si=RQ3ZPRceQsNsC968",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-06-07T17:39:41.710534"
+    },
+    {
+      "title": "Claude Just Dropped ULTRA CODE. (Everything You Need to Know in 5 min).",
+      "url": "https://youtu.be/IgIlIWqeT-I?si=5O4GBtXQJTIt3kl1",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-06-07T17:39:41.637367"
+    },
+    {
+      "title": "How To Learn So Fast It’s Almost Unfair",
+      "url": "https://youtu.be/npQ2IORdlvU?si=KJuZqmAy_5x10433",
+      "folder_path": "Education",
+      "date_added": "2026-06-07T17:39:41.463219"
+    },
+    {
+      "title": "Build A Claude Knowledge Base That Self-Improves!",
+      "url": "https://youtu.be/ib74sLgjIBM?si=B8IXfpXPx0oGdsZg",
+      "folder_path": "Technology/AI/Knowledge-Management",
+      "date_added": "2026-06-07T17:39:36.221298"
+    },
+    {
+      "title": "The Skill That 10x’d My Claude Code Projects",
+      "url": "https://youtu.be/c0kaKxM2pHg?si=itHlKFwL7xqNRBLa",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-06-07T17:39:36.197480"
+    },
+    {
+      "title": "Claude Design Tutorial for Beginners | Master 99% in under 20 Minutes",
+      "url": "https://youtu.be/ii9MJCBHqjM?si=BwLBsqfHpIVAQ4KN",
+      "folder_path": "Technology/AI/Claude",
+      "date_added": "2026-06-07T17:39:36.122651"
+    },
+    {
+      "title": "I Tested Every Claude Code Feature, These 12 Are the Best",
+      "url": "https://youtu.be/vfWTyEreOEc?si=hrmeN1OQ1bfdMI6F",
+      "folder_path": "Technology/AI/Claude/Claude-Code",
+      "date_added": "2026-06-07T17:39:35.996303"
+    },
     {
       "title": "10 Apple Photos Tricks You'll Wonder How You Lived Without",
       "url": "https://youtu.be/jKyQxwWmM9c?si=Gw5xb1SJDZ6dIF1p",
